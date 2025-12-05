@@ -1,8 +1,7 @@
 services:
   - type: web
     name: docusense-backend
-    runtime: python3
-    region: singapore
+    runtime: python
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    plan: free
